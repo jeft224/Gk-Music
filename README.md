@@ -18,6 +18,8 @@ npm run dev
 
 ## Overview
 
+> 前端
+
 - webpack
 - electron
 - electron-builder
@@ -31,6 +33,10 @@ npm run dev
 - typescript
 - eslint
 - prettier
+
+> 后端
+
+- 基于 Binaryify/NeteaseCloudMusicApi 开发
 
 ## DevTools
 
