@@ -37,6 +37,7 @@ npm run dev
 > 后端
 
 - 基于 Binaryify/NeteaseCloudMusicApi 开发
+- 用 egg 转发
 
 ## DevTools
 
