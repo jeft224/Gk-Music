@@ -53,5 +53,3 @@ npm run build
 ```
 
 Please check the `release` folder after the build is complete.
-
-### Build package
