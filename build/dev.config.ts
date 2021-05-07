@@ -25,8 +25,8 @@ const devConfig = {
     dev: {
       variables: {
         API_PROTOCOL: 'http://',
-        API_HOST: 'yapi.demo.qunar.com',
-        API_BASE_PATH: '/mock/55986',
+        API_HOST: '120.78.146.189',
+        API_BASE_PATH: '/music/',
       },
     },
 

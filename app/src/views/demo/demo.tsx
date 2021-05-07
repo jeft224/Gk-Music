@@ -13,6 +13,7 @@ declare interface DemoState {
   loading: boolean
   createWindowLoading: boolean
   asyncDispatchLoading: boolean
+  songData: Partial<queryRecommendSongUsingGET.Response>
 }
 
 /**
@@ -29,6 +30,7 @@ export default class Demo extends React.Component<DemoProps, DemoState> {
     loading: false,
     createWindowLoading: false,
     asyncDispatchLoading: false,
+    songData: {},
   }
 
   // 构造函数
@@ -38,11 +40,13 @@ export default class Demo extends React.Component<DemoProps, DemoState> {
 
   componentDidMount(): void {
     console.log(this)
+    this.fetchSongList()
   }
 
   render(): JSX.Element {
-    const { resData, loading, createWindowLoading, asyncDispatchLoading } = this.state
+    const { resData, loading, createWindowLoading, asyncDispatchLoading, songData } = this.state
     const { count: reduxCount, countAlias } = this.props
+    const { result } = songData
     return (
       <div className="layout-padding">
         <Card title="Redux Test" className="mb-16">
@@ -109,6 +113,18 @@ export default class Demo extends React.Component<DemoProps, DemoState> {
             <Input.TextArea value={JSON.stringify(resData)} autoSize />
           </Spin>
         </Card>
+
+        <Card title="推荐">
+          {result?.map(({ name, copywriter, picUrl, id }) => {
+            return (
+              <div key={id}>
+                <span>{name}</span>
+                <p>{copywriter}</p>
+                <img src={picUrl} alt="" />
+              </div>
+            )
+          })}
+        </Card>
       </div>
     )
   }
@@ -128,6 +144,12 @@ export default class Demo extends React.Component<DemoProps, DemoState> {
   openNewWindow = (): void => {
     this.setState({ createWindowLoading: true })
     $tools.createWindow('Demo').finally(() => this.setState({ createWindowLoading: false }))
+  }
+
+  fetchSongList(): void {
+    $api.queryRecommendSong({ limit: 50 }, { method: 'GET' }).then((resData) => {
+      this.setState({ songData: resData })
+    })
   }
 
   requestTest(): void {
