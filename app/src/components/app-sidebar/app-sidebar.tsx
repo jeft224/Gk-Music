@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tooltip } from 'antd'
+// import { Tooltip } from 'antd'
 
 import AppSideMenus from './side-menus.json'
 import './app-sidebar.less'
@@ -10,6 +10,10 @@ interface SideMenuItem {
   title: string
   icon: string
 }
+interface SideMenuCategory {
+  title: string
+  children: Array<SideMenuItem>
+}
 
 interface State {
   activeMenuKey: string
@@ -17,7 +21,7 @@ interface State {
 
 export class AppSidebar extends React.Component<unknown, State> {
   state: State = {
-    activeMenuKey: AppSideMenus[0]?.key,
+    activeMenuKey: '', // AppSideMenus[0]?.key
   }
 
   componentDidMount(): void {
@@ -39,22 +43,40 @@ export class AppSidebar extends React.Component<unknown, State> {
     )
   }
 
-  renderMenuItem = ({ key, icon, title, href }: SideMenuItem): JSX.Element => {
+  renderMenuItem = ({ title, children }: SideMenuCategory): JSX.Element => {
     const { activeMenuKey } = this.state
-    const isActive = activeMenuKey === key
+    // const isActive = activeMenuKey === key
     // const iconProps: IconProps = { type: icon, className: 'fs-24' }
     // if (activeMenuKey === key) {
     //   iconProps.theme = 'filled'
     //   iconProps.style = { color: '#fff' }
     // }
     return (
-      <Tooltip key={key} overlayClassName="side-menu-item-tooltip" placement="right" title={title}>
-        <a
-          className={`side-menu-item fs-24 ri-${icon}-${isActive ? 'fill' : 'line'}`}
-          style={{ color: isActive ? '#fff' : '' }}
-          href={href}
-        ></a>
-      </Tooltip>
+      <div className={'side-menu-box'}>
+        <span>{title}</span>
+        <div className={'side-menu-children'}>
+          {children.map(({ key, title: subTitle, icon, href }: SideMenuItem) => {
+            const isActive = activeMenuKey === key
+            return (
+              <a
+                key={key}
+                className={`side-menu-item fs-24 ri-${icon}-${isActive ? 'fill' : 'line'}`}
+                style={{ color: isActive ? '#808695' : '#000' }}
+                href={href}
+              >
+                {subTitle}
+              </a>
+            )
+          })}
+        </div>
+      </div>
+      // <Tooltip key={key} overlayClassName="side-menu-item-tooltip" placement="right" title={title}>
+      //  <a
+      //     className={`side-menu-item fs-24 ri-${icon}-${isActive ? 'fill' : 'line'}`}
+      //     style={{ color: isActive ? '#fff' : '#000' }}
+      //     href={href}
+      //   ></a>
+      // </Tooltip>
     )
   }
 } // class AppSidebar end

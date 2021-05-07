@@ -6,16 +6,34 @@
   background-color: @sidebar_background;
   color: fade(@color_light, 75);
   user-select: none;
+  min-width: 200px;
   .side-menu {
     margin-top: @padding;
+    .side-menu-box {
+      // width: 100%;
+      margin: 10px 20px 20px 20px;
+      color: @color_gray;
+    }
+    .side-menu-children {
+      // width: 100%;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
     .side-menu-item {
-      width: 100%;
-      text-align: center;
-      padding: @padding;
+      // width: 100%;
+      // text-align: center;
+      // padding: @padding;
+      // background-color: red;
+      margin-top: 6px;
+      border-radius: 4px;
+      font-size: 16px;
       color: fade(@color_light, 65);
       &:hover,
       &.active {
         color: @color_white;
+        background-color: @color_primary;
       }
     }
   }
