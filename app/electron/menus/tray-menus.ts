@@ -10,7 +10,7 @@ export const trayMenus: MenuItemConstructorOptions[] = [
         query: { testObj: { aa: ['bb', 'cc'] } },
       }),
   },
-  { label: 'Demo', click: () => $tools.createWindow('Demo') },
+  { label: 'Recommend', click: () => $tools.createWindow('Recommend') },
 
   {
     label: 'Help',

@@ -8,7 +8,7 @@ declare namespace queryRecommendSongUsingGET {
     type: number
     name: string
     copywriter: string
-    picUrl: string
+    coverImgUrl: string
     canDislike: boolean
     trackNumberUpdateTime: number
     playCount: number
@@ -18,9 +18,13 @@ declare namespace queryRecommendSongUsingGET {
   }
 
   interface Response {
-    hasTaste: boolean
-    category: number
+    // hasTaste: boolean
+    // category: number
+    // code: number
     code: number
-    result: SongItem[]
+    lasttime: number
+    more: boolean
+    total: number
+    playlists: SongItem[]
   }
 }

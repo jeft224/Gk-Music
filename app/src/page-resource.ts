@@ -5,8 +5,8 @@
 // 设为 undefined 将不会创建路由，一般用于重定向页面
 export const Home = undefined
 
-export const Demo = import('./views/demo/demo')
-export const PageParams = import('./views/demo/page-params')
+export const Recommend = import('./views/recommend/recommend')
+export const PageParams = import('./views/recommend/page-params')
 export const LogViewer = import('./views/log-viewer/log-viewer')
 export const About = import('./views/about/about')
 

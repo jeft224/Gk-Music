@@ -3,8 +3,8 @@
     "title": "在线音乐",
     "children": [
       {
-        "key": "Demo",
-        "href": "#/",
+        "key": "Recommend",
+        "href": "#/recommend",
         "title": "音乐馆",
         "icon": "home-3"
       },

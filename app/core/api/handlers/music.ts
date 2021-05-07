@@ -12,7 +12,7 @@ export function queryRecommendSong(
   params?: queryRecommendSongUsingGET.Params,
   options?: RequestOptions
 ): Promise<queryRecommendSongUsingGET.Response> {
-  return $api.request('/personalized', params, options)
+  return $api.request('/top/playlist/highquality', params, options)
 }
 
 // /**

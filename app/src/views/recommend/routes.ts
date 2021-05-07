@@ -1,7 +1,7 @@
 const routes: RouteConfig[] = [
   {
-    key: 'Demo',
-    path: '/demo',
+    key: 'Recommend',
+    path: '/recommend',
     createConfig: {
       single: false,
     },
