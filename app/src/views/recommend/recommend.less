@@ -1,4 +1,25 @@
+@import '~@/src/styles/_var.less';
 .music {
+  padding: 0 16px 16px 16px;
+  height: 100%;
+  overflow: hidden;
+  .title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: @color_black;
+    font-weight: bold;
+  }
+  .ant-tabs-tab {
+    padding: 8px 0;
+  }
+  .site-custom-tab-bar {
+    z-index: 1;
+    background: #fff;
+  }
+  .ant-tabs-top > .ant-tabs-nav::before,
+  .ant-tabs-top > div > .ant-tabs-nav::before {
+    border: none;
+  }
   &-image {
     width: 200px;
     height: 200px;
@@ -17,5 +38,8 @@
   &-list {
     overflow: hidden;
     flex-wrap: wrap;
+  }
+  ::-webkit-scrollbar {
+    display: none; /*ChromeSafari*/
   }
 }
