@@ -4,6 +4,8 @@ import { StickyContainer, Sticky } from 'react-sticky'
 
 import { withStore } from '@/src/components'
 
+import Rank from './components/rank'
+
 import './recommend.less'
 
 interface DemoProps extends PageProps, StoreProps {
@@ -89,7 +91,7 @@ export default class Recommend extends React.Component<DemoProps, RecommendState
               3
             </TabPane>
             <TabPane tab="排行" key="4">
-              4
+              <Rank />
             </TabPane>
             <TabPane tab="歌单" key="5">
               5

@@ -28,3 +28,58 @@ declare namespace queryRecommendSongUsingGET {
     playlists: SongItem[]
   }
 }
+
+declare namespace queryRankUsingGET {
+  interface Params {}
+
+  interface RankItem {
+    subscribers: array
+    subscribed: string
+    creator: string
+    artists: string
+    tracks: string
+    updateFrequency: string
+    backgroundCoverId: number
+    backgroundCoverUrl: string
+    titleImage: number
+    titleImageUrl: string
+    englishTitle: string
+    opRecommend: boolean
+    recommendInfo: string
+    adType: number
+    trackNumberUpdateTime: number
+    subscribedCount: number
+    cloudTrackCount: number
+    userId: number
+    createTime: number
+    highQuality: boolean
+    coverImgId: number
+    newImported: boolean
+    anonimous: boolean
+    updateTime: number
+    totalDuration: number
+    trackCount: number
+    coverImgUrl: string
+    specialType: number
+    commentThreadId: string
+    trackUpdateTime: number
+    privacy: number
+    playCount: number
+    ordered: boolean
+    tags: Array<any>
+    description: string
+    status: number
+    name: string
+    id: number
+    coverImgId_str: string
+    ToplistType: string
+  }
+
+  interface Response {
+    // hasTaste: boolean
+    // category: number
+    // code: number
+    code: number
+    list: RankItem[]
+  }
+}

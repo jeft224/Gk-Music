@@ -15,6 +15,13 @@ export function queryRecommendSong(
   return $api.request('/top/playlist/highquality', params, options)
 }
 
+export function queryRankList(
+  params?: queryRankUsingGET.Params,
+  options?: RequestOptions
+): Promise<queryRankUsingGET.Response> {
+  return $api.request('/toplist/detail', params, options)
+}
+
 // /**
 //  * 查询所有网址链接
 //  * @param params
