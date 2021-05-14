@@ -76,9 +76,11 @@ export default class Recommend extends React.Component<DemoProps, RecommendState
               <ul className="music-list">
                 {playlists?.map(({ name, coverImgUrl, id }) => {
                   return (
-                    <li key={id} className=" music-item flex column  center">
-                      <img className="music-image" src={coverImgUrl} alt="" />
-                      <p className="music-name">{name}</p>
+                    <li key={id} className="music-item ">
+                      <div className="music-sub-item">
+                        <img className="music-image" src={coverImgUrl} alt="" />
+                        <p className="music-name">{name}</p>
+                      </div>
                     </li>
                   )
                 })}
