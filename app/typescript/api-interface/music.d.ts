@@ -32,12 +32,17 @@ declare namespace queryRecommendSongUsingGET {
 declare namespace queryRankUsingGET {
   interface Params {}
 
+  interface TrackItem {
+    first: string
+    second: string
+  }
+
   interface RankItem {
     subscribers: array
     subscribed: string
     creator: string
     artists: string
-    tracks: string
+    tracks: TrackItem[]
     updateFrequency: string
     backgroundCoverId: number
     backgroundCoverUrl: string
@@ -75,10 +80,20 @@ declare namespace queryRankUsingGET {
     ToplistType: string
   }
 
+  interface ArtistTop {
+    artists: TrackItem[]
+    coverUrl: string
+    name: string
+    upateFrequency: string
+    position: number
+    updateFrequency: string
+  }
+
   interface Response {
     // hasTaste: boolean
     // category: number
     // code: number
+    artistToplist: ArtistTop
     code: number
     list: RankItem[]
   }
