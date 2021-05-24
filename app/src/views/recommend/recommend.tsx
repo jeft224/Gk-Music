@@ -86,17 +86,14 @@ export default class Recommend extends React.Component<DemoProps, RecommendState
                 })}
               </ul>
             </TabPane>
-            <TabPane tab="电台" key="2">
+            <TabPane tab="歌手" key="2">
               2
             </TabPane>
-            <TabPane tab="歌手" key="3">
-              3
-            </TabPane>
-            <TabPane tab="排行" key="4">
+            <TabPane tab="排行" key="3">
               <Rank />
             </TabPane>
-            <TabPane tab="歌单" key="5">
-              5
+            <TabPane tab="歌单" key="4">
+              4
             </TabPane>
           </Tabs>
         </StickyContainer>

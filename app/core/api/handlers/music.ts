@@ -22,6 +22,13 @@ export function queryRankList(
   return $api.request('/toplist/detail', params, options)
 }
 
+export function queryDJBannerList(
+  params?: queryDJBannerGET.Params,
+  options?: RequestOptions
+): Promise<queryDJBannerGET.Response> {
+  return $api.request('/dj/banner', params, options)
+}
+
 // /**
 //  * 查询所有网址链接
 //  * @param params

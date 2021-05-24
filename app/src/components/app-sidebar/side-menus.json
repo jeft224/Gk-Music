@@ -15,6 +15,12 @@
         "icon": "terminal-box"
       },
       {
+        "key": "Transceiver",
+        "href": "#/transceiver",
+        "title": "电台",
+        "icon": "flask"
+      },
+      {
         "key": "PageParams",
         "href": "#/page-params/ok?obj={ss:['1',2,3]}",
         "title": "电台",

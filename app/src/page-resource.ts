@@ -6,6 +6,7 @@
 export const Home = undefined
 
 export const Recommend = import('./views/recommend/recommend')
+export const Transceiver = import('./views/transceiver/transceiver')
 export const PageParams = import('./views/recommend/page-params')
 export const LogViewer = import('./views/log-viewer/log-viewer')
 export const About = import('./views/about/about')
