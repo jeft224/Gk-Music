@@ -98,3 +98,20 @@ declare namespace queryRankUsingGET {
     list: RankItem[]
   }
 }
+
+declare namespace queryDJBannerGET {
+  interface Params {}
+
+  interface BannerItem {
+    targetId: number
+    targetType: number
+    pic: string
+    url: string
+    typeTitle: string
+    exclusive: boolean
+  }
+  interface Response {
+    data: BannerItem[]
+    code: number
+  }
+}
