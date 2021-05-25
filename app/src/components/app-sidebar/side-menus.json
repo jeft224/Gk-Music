@@ -6,19 +6,19 @@
         "key": "Recommend",
         "href": "#/recommend",
         "title": "音乐馆",
-        "icon": "home-3"
+        "icon": "music-2"
       },
       {
         "key": "LogViewer",
         "href": "#/log-viewer",
         "title": "视频",
-        "icon": "terminal-box"
+        "icon": "vidicon"
       },
       {
         "key": "Transceiver",
         "href": "#/transceiver",
         "title": "电台",
-        "icon": "flask"
+        "icon": "gps"
       },
       {
         "key": "PageParams",
@@ -34,14 +34,20 @@
       {
         "key": "any",
         "href": "#/any",
-        "title": "No Match",
-        "icon": "forbid"
+        "title": "本地和下载",
+        "icon": "computer"
       },
       {
         "key": "About",
         "href": "#/about",
-        "title": "About",
-        "icon": "information"
+        "title": "最近播放",
+        "icon": "time"
+      },
+      {
+        "key": "About",
+        "href": "#/about",
+        "title": "试听列表",
+        "icon": "play-list"
       }
     ]
   }

@@ -27,6 +27,7 @@
       color: @color_black;
       padding: 4px 0;
       padding-left: 10px;
+      position: relative;
       &.active {
         color: @color_white;
         background: linear-gradient(to right, @color_primary, @color_primary_grad);
@@ -36,6 +37,13 @@
         // background-color: @color_primary;
         background-color: fade(@color_gray, 10);
       }
+      &::before {
+        top: 6px;
+        position: absolute;
+      }
+    }
+    .side-menu-item_title {
+      padding-left: 20px;
     }
   }
 }

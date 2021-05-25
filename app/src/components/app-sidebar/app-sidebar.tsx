@@ -60,13 +60,13 @@ export class AppSidebar extends React.Component<unknown, State> {
             return (
               <a
                 key={key}
-                className={`side-menu-item fs-24 ri-${icon}-${isActive ? 'fill' : 'line'} ${
+                className={`side-menu-item fs-24 ri-${icon}-${isActive ? 'fill' : 'fill'} ${
                   isActive ? 'active' : ''
                 }`}
                 // style={{ color: isActive ? '#808695' : '#000' }}
                 href={href}
               >
-                {subTitle}
+                <span className="side-menu-item_title">{subTitle}</span>
               </a>
             )
           })}
