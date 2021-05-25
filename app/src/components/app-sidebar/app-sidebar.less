@@ -28,8 +28,9 @@
       padding: 4px 0;
       padding-left: 10px;
       position: relative;
+      transition: color 0.03s ease-in;
       &.active {
-        color: @color_white;
+        color: fade(@color_white, 75);
         background: linear-gradient(to right, @color_primary, @color_primary_grad);
       }
       &:hover {

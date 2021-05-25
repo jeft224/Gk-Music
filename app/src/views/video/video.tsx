@@ -51,6 +51,14 @@ export default class Video extends React.Component<DemoProps, VideoState> {
       .finally(() => this.setState({ loading: false }))
   }
 
+  renderTabBar(props: any, DefaultTabBar: React.ComponentType): React.ReactElement {
+    return (
+      <Sticky topOffset={80} relative={true}>
+        {({ style }) => <DefaultTabBar {...props} className="site-custom-tab-bar" style={{ ...style }} />}
+      </Sticky>
+    )
+  }
+
   render(): JSX.Element {
     const { BannerData } = this.state
     const { data } = BannerData
