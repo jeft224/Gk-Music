@@ -9,8 +9,8 @@
         "icon": "music-2"
       },
       {
-        "key": "LogViewer",
-        "href": "#/log-viewer",
+        "key": "Video",
+        "href": "#/video",
         "title": "视频",
         "icon": "vidicon"
       },
@@ -19,12 +19,6 @@
         "href": "#/transceiver",
         "title": "电台",
         "icon": "gps"
-      },
-      {
-        "key": "PageParams",
-        "href": "#/page-params/ok?obj={ss:['1',2,3]}",
-        "title": "电台",
-        "icon": "flask"
       }
     ]
   },
@@ -32,8 +26,8 @@
     "title": "我的音乐",
     "children": [
       {
-        "key": "any",
-        "href": "#/any",
+        "key": "PageParams",
+        "href": "#/page-params/ok?obj={ss:['1',2,3]}",
         "title": "本地和下载",
         "icon": "computer"
       },
@@ -44,10 +38,16 @@
         "icon": "time"
       },
       {
-        "key": "About",
-        "href": "#/about",
+        "key": "LogViewer",
+        "href": "#/log-viewer",
         "title": "试听列表",
         "icon": "play-list"
+      },
+      {
+        "key": "any",
+        "href": "#/any",
+        "title": "No Match",
+        "icon": "send-plane"
       }
     ]
   }

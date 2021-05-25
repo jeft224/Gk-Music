@@ -10,6 +10,7 @@ export const Transceiver = import('./views/transceiver/transceiver')
 export const PageParams = import('./views/recommend/page-params')
 export const LogViewer = import('./views/log-viewer/log-viewer')
 export const About = import('./views/about/about')
+export const Video = import('./views/video/video')
 
 export const NoMatch = import('./views/no-match/no-match')
 
